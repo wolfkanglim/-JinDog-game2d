@@ -1,0 +1,80 @@
+<!-- fox butterflies from 'Glitch' sprite sheets https://www.glitchthegame.com/inhabitants/animals/fox/
+dog Art by https://bevouliin.com/
+ Franks laboratory https://www.youtube.com/playlist?list...
+fish sprite from game developer studiohttps://www.gamedeveloperstudio.com/index.php
+background images from CRAFTPIX.NET
+ -->
+<!-- 
+////to do/////
+More Background - forest, beach, winterland, desert, volcano land, bckstreet town, countryside, undersea, magic land... Jin dog journey back to home. can he make it? happy to see Jin. 
+Time delay between levels insert 
+add rolling state, special effects and audios, asset file
+Make intro home page or hero
+Differnt enemies for each level --- fish, fox, chicken, pig, bird,....
+Ending page
+add move button and touch screen, reponsive for tablets smartphones
+bugs== proper reset, sudden speed occured,  
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Game Animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dongle:wght@300&family=Inknut+Antiqua:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <header class="home-container" id="home">
+        <h1 id="title">J I N  D O G </h1>
+        <h3 id="subtitle">Jin!  Run! Jump! Have Fun!</h3>
+        <h3 id="enter">Click or Press Enter to Start</h3>
+        <p id="copyright">WONDROUS EAST 2022 COPYRIGHT</p>
+        <canvas id="canvas_home"></canvas>
+    </header>   
+
+    <main class="main-container" id="main">    
+        <h1 id="loading">Loading...Dog State Animations</h1>
+        <canvas id="canvas_main"></canvas>
+
+        <!-- buttons for restart,pause, levelchangeg -->
+        <button class="btn" id="levelUpBtn" onclick="levelUp">Mission Completed!<br>Bonus 100 Point<br><span> Press Enter or Click to continue</span></button>
+        <button class="btn" id="restartBtn" > GAME OVER<br><span> Press Enter or Click to restart</span></button>
+        <button id="pauseBtn" onclick="pauseGame">PAUSE</button>
+
+        <!-- images -->
+        <img id="dog_sprite" src="./asset/dog_white.png">
+        <image id="yellow_fish" src="./asset/fish_yellow_swim.png" alt="yellow fish"></image>
+        <image id="blue_fish" src="./asset/fish_blue.png" alt="blue fish"></image>
+        <image id="black_fish" src="./asset/fish_black_swim.png" alt="fish black"></image>
+        <image id="red_fish" src="./asset/fish_red.png" alt="red fish"></image>
+        <image id="signboard" src="../imagesvs/woodHanging.png"></image>
+        <image id="apple" src="../imagesvs/apple8.png"></image>
+        <image id="heart" src="../imagesvs/heart4.png"></image>
+        <image id="orangeFox_run" src="./asset/orangeFox_run.png"></image>
+        <image id="orangeFox_walk" src="./asset/orangeFox_walk.png"></image>
+        <image id="orangeFox_jump" src="./asset/orangeFox_jump.png"></image>
+        <image id="orangeFox_taunt" src="./asset/orangeFox_taunt.png"></image>
+        <image id="orangeFox_pause" src="./asset/orangeFox_pause.png"></image>
+        <image id="silverFox_walk" src="./asset/silverFox_walk.png"></image>
+        <image id="silverFox_run" src="./asset/silverFox_run.png"></image>
+        <image id="silverFox_jump" src="./asset/silverFox_jump.png"></image>
+        <image id="chickenFlying" src="./asset/chicken_flying.png"></image>
+        <image id="chickenWalk" src="./asset/chicken_walk.png"></image>
+        <image id="chickenFall" src="./asset/chicken_fall_left.png"></image>
+
+        <!-- audios -->
+        <audio id="bgm" src="./asset/bgm_jindog.mp3" loop></audio>
+        <audio id="scoreBell" src="./asset/score_bell.mp3"></audio>
+        <audio id="collisionSound" src="./asset/enemycollision.mp3"></audio>
+        
+        <script type="module" src="./app.js"></script>
+        <link rel="shortcut icon" href="#">
+    </main>
+</body>
+</html>
