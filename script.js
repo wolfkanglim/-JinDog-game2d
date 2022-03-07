@@ -5,9 +5,8 @@ import {level1layers, level2layers,level3layers, level4layers} from './layer.js'
 import Fish from './enemyfish.js';
 import Treasure from './treasure.js';
 import Butterfly from './butterfly.js';
-import {orangefoxesWalk, orangefoxesRun, orangefoxesJump, silverfoxesWalk, silverfoxesRun,silverfoxesJump, orangeFoxRunHandler, orangeFoxWalkHandler, orangeFoxJumpHandler,  silverFoxWalkHandler, silverFoxJumpHandler, silverFoxRunHandler} from './enemyfox.js';
 import {Chicken} from './enemychicken.js';
- 
+import {Fox} from './enemyfox.js';
 
 export function init(){
      const loading = document.getElementById('loading');
@@ -45,6 +44,8 @@ export function init(){
        levelUpBtn.onclick = function levelUp() {
             fishes = []; 
             chickens = [];
+            orangeFoxes = [];
+            silverFoxes = [];
             lastTime = 0;
             player.restart(); 
                levelUpBtn.style.display = 'none';            
@@ -126,6 +127,57 @@ export function init(){
         chickenTimer += deltaTime;
     }
 
+ /////enemy  orangefox handler
+let foxTimer = 0;
+let foxInterval = 3000 + Math.random() * 4000;
+let orangeFoxes = [];
+const orangeFoxWalkImage = document.getElementById('orangeFox_walk');
+const orangeFoxRunImage = document.getElementById('orangeFox_run');
+const orangeFoxJumpImage = document.getElementById('orangeFox_jump');
+
+function orangeFoxHandler(context, deltaTime,width, height){  
+    const orangeFoxWalk = new Fox(orangeFoxWalkImage, width, height, 20, 0.1);
+    const orangeFoxRun = new Fox(orangeFoxRunImage, width, height, 10, 5);
+    const orangeFoxJump = new Fox(orangeFoxJumpImage, width, height, 23, 1);
+    if(foxTimer > foxInterval + Math.random() * 20000){
+        let randomNumber = Math.floor(Math.random() * 3);
+        let orangeFoxesArray = [orangeFoxWalk, orangeFoxRun, orangeFoxJump];
+        orangeFoxes.push(orangeFoxesArray[randomNumber]);
+        foxTimer = 0;
+    }
+       orangeFoxes = orangeFoxes.filter(fox => !fox.markedForDeletion);
+        foxTimer += deltaTime;
+        orangeFoxes.forEach(fox => {
+        fox.draw(context);
+        fox.update(deltaTime);
+    })
+} 
+
+/////enemy silver fox handler
+let silverFoxes = [];
+const silverFoxWalkImage = document.getElementById('silverFox_walk');
+const silverFoxRunImage = document.getElementById('silverFox_run');
+const silverFoxJumpImage = document.getElementById('silverFox_jump');
+
+function silverFoxHandler(context, deltaTime,width, height){  
+    const silverFoxWalk = new Fox(silverFoxWalkImage, width, height, 20, 0.1);
+    const silverFoxRun = new Fox(silverFoxRunImage, width, height, 10, 5);
+    const silverFoxJump = new Fox(silverFoxJumpImage, width, height, 23, 1);
+    if(foxTimer > foxInterval + Math.random() * 20000){
+        let randomNumber = Math.floor(Math.random() * 3);
+        let silverFoxesArray = [silverFoxWalk, silverFoxRun, silverFoxJump];
+        silverFoxes.push(silverFoxesArray[randomNumber]);
+        foxTimer = 0;
+    }
+       silverFoxes = silverFoxes.filter(fox => !fox.markedForDeletion);
+        foxTimer += deltaTime;
+        silverFoxes.forEach(fox => {
+        fox.draw(context);
+        fox.update(deltaTime);
+    })
+}
+ 
+ 
 /////enemychicken enemyfox enemyfish collision
 function collisionEnemy(enemy){      
     for(let i = 0; i < enemy.length; i++){
@@ -274,7 +326,6 @@ function collisionEnemy(enemy){
     if(score <= 100){
         layerHandler(level1layers, player);
         fishHandler(deltaTime);
-        //chickenHandler(ctx, deltaTime);      
     } else if(score > 100 && score < 110){
         bgm.pause();                            
         gameOver = true;        
@@ -289,38 +340,24 @@ function collisionEnemy(enemy){
         levelUpBtn.style.display = 'block'; 
     } else if( score <= 500){
         forest = 'KEZIA FOREST'; // cassia tree
-        fishes = [];
         layerHandler(level3layers,player);
-        orangeFoxWalkHandler(ctx, deltaTime, canvas.width, canvas.height);
-        orangeFoxRunHandler(ctx, deltaTime, canvas.width, canvas.height);
-        orangeFoxJumpHandler(ctx, deltaTime, canvas.width, canvas.height);
-    }  else if(score > 500 && score < 510){
+        orangeFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
+   }  else if(score > 500 && score < 510){
         bgm.pause();                            
         gameOver = true;        
         levelUpBtn.style.display = 'block'; 
+   
     } else if( score <= 700){
         forest = 'ARYWODE FOREST'; //from the fir forest
         layerHandler(level4layers, player);       
-        silverFoxWalkHandler(ctx, deltaTime, canvas.width, canvas.height);
-        silverFoxRunHandler(ctx, deltaTime, canvas.width, canvas.height);
-        silverFoxJumpHandler(ctx, deltaTime, canvas.width, canvas.height);
+        silverFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
     } else if(score > 1000) {
         forest = 'WONDER FOREST';
         layerHandler(level1layers, player);
-        orangeFoxWalkHandler(ctx, deltaTime, canvas.width, canvas.height);
-        orangeFoxRunHandler(ctx, deltaTime, canvas.width, canvas.height);
-        orangeFoxJumpHandler(ctx, deltaTime, canvas.width, canvas.height);
-        silverFoxWalkHandler(ctx, deltaTime, canvas.width, canvas.height);
-        silverFoxRunHandler(ctx, deltaTime, canvas.width, canvas.height);
-        silverFoxJumpHandler(ctx, deltaTime, canvas.width, canvas.height);
+        orangeFoxHandler(ctx, deltaTime, canvas.width, canvas.height); silverFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
     } else {
         layerHandler(level1layers, player);
-        orangeFoxWalkHandler(ctx, deltaTime, canvas.width, canvas.height);
-        orangeFoxRunHandler(ctx, deltaTime, canvas.width, canvas.height);
-        orangeFoxJumpHandler(ctx, deltaTime, canvas.width, canvas.height);
-        silverFoxWalkHandler(ctx, deltaTime, canvas.width, canvas.height);
-        silverFoxRunHandler(ctx, deltaTime, canvas.width, canvas.height);
-        silverFoxJumpHandler(ctx, deltaTime, canvas.width, canvas.height);
+        orangeFoxHandler(ctx, deltaTime, canvas.width, canvas.height); silverFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
         fishHandler(deltaTime);
        chickenHandler(ctx, deltaTime);
     }
@@ -330,13 +367,9 @@ function collisionEnemy(enemy){
     treasureHandler(ctx,deltaTime);
     butterflyHandler(ctx, deltaTime);
 
-    /////collsion check
-    collisionEnemy(orangefoxesWalk);
-    collisionEnemy(orangefoxesRun);
-    collisionEnemy(orangefoxesJump);
-    collisionEnemy(silverfoxesWalk);
-    collisionEnemy(silverfoxesRun);
-    collisionEnemy(silverfoxesJump);
+    /////collsion check  
+    collisionEnemy(orangeFoxes);
+    collisionEnemy(silverFoxes);
     collisionEnemy(chickens);
     collisionEnemy(fishes);
         drawText();
