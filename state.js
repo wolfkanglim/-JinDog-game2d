@@ -34,8 +34,8 @@ export class StandingRight extends State{
         else if(input === 'PRESS right') this.player.setState(states.RUNNING_RIGHT);
         else if(input === 'PRESS down') this.player.setState(states.SITTING_RIGHT);
         else if(input === 'PRESS up') this.player.setState(states.JUMPING_RIGHT);
-        //else if(input === 'PRESS ctrl right') this.player.setState(states.ROLL_RIGHT);
-        //else if(input === 'PRESS ctrl left') this.player.setState(states.ROLL_LEFT);
+        else if(input === 'PRESS ctrl right') this.player.setState(states.ROLL_RIGHT);
+        else if(input === 'PRESS ctrl left') this.player.setState(states.ROLL_LEFT);
     }
 }
 export class StandingLeft extends State{
@@ -53,6 +53,8 @@ export class StandingLeft extends State{
         else if(input === 'PRESS left') this.player.setState(states.RUNNING_LEFT);
         else if(input === 'PRESS down') this.player.setState(states.SITTING_LEFT);
         else if(input === 'PRESS up') this.player.setState(states.JUMPING_LEFT);
+        else if(input === 'PRESS ctrl right') this.player.setState(states.ROLL_RIGHT);
+        else if(input === 'PRESS ctrl left') this.player.setState(states.ROLL_LEFT);
     }
 }
 //Down key for sitting
@@ -102,7 +104,8 @@ export class RunningRight extends State{
         else if(input === 'RELEASE right') this.player.setState(states.STANDING_RIGHT);
         else if(input === 'PRESS down') this.player.setState(states.SITTING_RIGHT);
         else if(input === 'PRESS up') this.player.setState(states.JUMPING_RIGHT);
-        
+        else if(input === 'PRESS ctrl right') this.player.setState(states.ROLL_RIGHT);
+        else if(input === 'PRESS ctrl left') this.player.setState(states.ROLL_LEFT);
     }
 }
 export class RunningLeft extends State{
@@ -121,7 +124,8 @@ export class RunningLeft extends State{
         else if(input === 'RELEASE left') this.player.setState(states.STANDING_LEFT);
         else if(input === 'PRESS down') this.player.setState(states.SITTING_LEFT);
         else if(input === 'PRESS up') this.player.setState(states.JUMPING_LEFT);
-        
+        else if(input === 'PRESS ctrl right') this.player.setState(states.ROLL_RIGHT);
+        else if(input === 'PRESS ctrl left') this.player.setState(states.ROLL_LEFT);
     }
 }
 //jumping
@@ -188,18 +192,22 @@ export class FallLeft extends State{
 
 //////////rolling not completed yet///////////
 
-/* export class RollRight extends State{
+export class RollRight extends State{
     constructor(player){
         super('ROLL RIGHT');
         this.player = player;
     }
     enter(){
         this.player.frameY = 10;
-        this.player.speed = this.player.maxSpeed; 
+        this.player.speed = this.player.maxSpeed * 1.5; 
         this.player.maxframe = 6;
     }
     handleInput(input){
-                
+        if(input === 'PRESS ctrl left') this.player.setState(states.ROLL_LEFT);
+        else if(input === 'RELEASE right') this.player.setState(states.STANDING_RIGHT);
+        else if(input === 'PRESS down') this.player.setState(states.SITTING_RIGHT);
+        else if(input === 'PRESS up') this.player.setState(states.JUMPING_RIGHT);
+              
     }
 }
 export class RollLeft extends State{
@@ -209,11 +217,14 @@ export class RollLeft extends State{
     }
     enter(){
         this.player.frameY = 11;
-        this.player.speed = this.player.maxSpeed; 
+        this.player.speed = - this.player.maxSpeed * 1.5; 
         this.player.maxframe = 6;
     }
     handleInput(input){
-                
+        if(input === 'PRESS ctrl right') this.player.setState(states.ROLL_RIGHT);
+        else if(input === 'RELEASE left') this.player.setState(states.STANDING_LEFT);
+        else if(input === 'PRESS down') this.player.setState(states.SITTING_LEFT);
+        else if(input === 'PRESS up') this.player.setState(states.JUMPING_Left);     
     }
 }
- */
+
