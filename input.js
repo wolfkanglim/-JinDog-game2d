@@ -1,10 +1,12 @@
-  const pantingSound = new Audio();
-    pantingSound.src = '../gamesound/dog_panting.wav';
-    pantingSound.currentTime = 0;
-    const barkTwiceSound = new Audio();
-    barkTwiceSound.src = './asset/dog-barking-twice.wav';
-    barkTwiceSound.currentTime = 0;
+   const pantingSound = new Audio();
+    pantingSound.src = './asset/dog_panting.wav';    
+    pantingSound.volume = 0.5;
+  const barkTwiceSound = new Audio();
+    barkTwiceSound.src = './asset/dog-barking-twice.wav';    
     barkTwiceSound.volume = 0.5;
+    const fireBallSound = new Audio();
+    fireBallSound.src = './asset/fireball3.mp3';
+    fireBallSound.volume = 0.2;
 
 export default class handleInput{
     constructor(){
@@ -12,31 +14,42 @@ export default class handleInput{
         this.touchY = 0;
         this.touchTreshold = 30;
         window.addEventListener('keydown', (e) => {
-            switch(e.key){
+            if((e.ctrlKey) && e.key === 'ArrowRight'){
+                this.lastkey = 'PRESS ctrl right';
+                fireBallSound.currentTime = 0;
+                fireBallSound.play();
+            }    
+            if((e.ctrlKey) && e.key === 'ArrowLeft'){
+                this.lastkey = 'PRESS ctrl left';
+                fireBallSound.currentTime = 0;
+                fireBallSound.play(); 
+            }    
+           else if(!e.ctrlKey){
+                switch(e.key){
                  case 'ArrowLeft':
-                     if(e.key === 'Control'){
-                        pantingSound.play();
-                         this.lastkey = 'PRESS ctrl left';
-                     } else {
-                         this.lastkey = "PRESS left";                          
-                     }                     
+                     pantingSound.currentTime = 0;                       
+                     pantingSound.play();                      
+                     this.lastkey = "PRESS left";                         
                      break;
                  case 'ArrowRight':
-                     if(e.shift){
-                         this.lastkey = 'PRESS ctrl right';
-                     } else {
-                         this.lastkey = "PRESS right";
-                     }                     
-                     break;        
+                     pantingSound.currentTime = 0;
+                    pantingSound.play();
+                    this.lastkey = "PRESS right";
+                    break;        
                  case 'ArrowDown':                    
-                         this.lastkey = "PRESS down";
+                    this.lastkey = "PRESS down";
                      break;                       
                  case 'ArrowUp':
                      this.lastkey = "PRESS up";
+                     barkTwiceSound.currentTime = 0;
                      barkTwiceSound.play();
                      break;
-               }                   
+               }   
+           }     
+           
+                        
         })
+
         window.addEventListener('keyup', (e) => {
             switch(e.key){
                 case 'ArrowLeft':
@@ -65,6 +78,8 @@ export default class handleInput{
                 gameOver = false;
             }
         })        
+
+
         ///// touchsreen ///// 
         ///// need to add 'swipe up' 'swipe down' in inputHandler at state.js 
 
