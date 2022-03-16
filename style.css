@@ -125,5 +125,71 @@ span {
 #dog_sprite, #yellow_fish, #apple, #blue_fish, #black_fish, #red_fish,#signboard, #heart, #orangeFox_jump,#orangeFox_run, #orangeFox_walk, #orangeFox_taunt, #orangeFox_pause, #silverFox_walk, #silverFox_run, #silverFox_jump, #chickenFlying, #chickenWalk, #chickenFall {
     display: none;
 }
+.controlBtn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color: rgba(22, 22, 22, 0.5);
+    border:1px solid #fff;
+    border-radius: 5px;
+}
+#jumpLeft{
+    top: 150px;
+    left: 0;
+}
+#runLeft{
+    width: 70px;
+    top: 210px;
+    left: 0;
+}
+#rollLeft{
+    top: 270px;
+    left: 0;
+}
+#jumpRight{
+    top: 150px;
+    right: 0px;
+}
+#runRight{
+    width: 70px;
+    top: 210px;
+    right: 0;
+}
+#rollRight{
+    top: 270px;
+    right: 0;
+}
 
+/* Responsive web */
+@media screen and (max-width: 450px) {
+    #hanging_board{
+        width: 95%;
+        min-height: 180px;
+    }
+    #title {
+        font-size: 50px;
+        top: 80px;
+    }
+    #dog_jump {
+        top: 25%;
+    }
+    #orangefoxBrushed {
+        top: 60%;
+        right: 20px;
+    }
+    #subtitle {
+        font-size: 30px;
+        top: 50vh;
+    }
+    #enter {
+        top: 85%;
+    }
+    #restartBtn, #endingBtn {
+        height: 150px;
+        font-size: 1rem;
+        text-align: justify;
+        line-height: 1.2;
+    }
+}
 
