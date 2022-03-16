@@ -18,7 +18,7 @@ export default class Player{
         this.speed = 0;
         this.maxSpeed = 10;
         this.vy = 0;
-        this.life = 3;
+        this.life = 5;
         this.gravity = 1;
         //deltaTime frame animation
         this.maxFrame = 4;
