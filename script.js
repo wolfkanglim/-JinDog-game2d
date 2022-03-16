@@ -27,6 +27,7 @@ export function init(){
     const treasureSound = document.getElementById('scoreBell');
         treasureSound.volume = 0.5;
     const collisionSound = document.getElementById('collisionSound');
+     const magicBell = document.getElementById('magicBell');
     const player = new Player(canvas.width, canvas.height);
     const input = new handleInput();    
     const restartBtn = document.getElementById('restartBtn');
@@ -284,14 +285,14 @@ export function init(){
         ctx.fillStyle = 'rgba(20, 20, 20, 0.5)';
         ctx.strokeStyle = 'white';
         ctx.lineWidth = 2;
-        ctx.drawImage(signboard, canvas.width / 1.4 + 30, 0, 230, 70);
+        ctx.drawImage(signboard, canvas.width / 1.45, 0, 230, 70);
         ctx.drawImage(signboard, canvas.width / 15 + 10, 0, 240, 70);
         ctx.fill();
         ctx.stroke();
         ctx.font = '20px "Inknut Antiqua"'; //font-family: , serif;
         ctx.fillStyle = 'black';
-        ctx.fillText('SCORE: ' + score, canvas.width / 1.3, 55);
-        ctx.fillText(forest, canvas.width / 10 - 10, 55);
+        ctx.fillText('SCORE: ' + score, canvas.width / 1.4, 55);
+        ctx.fillText(forest, canvas.width / 11 - 10, 55);
     }
 
 /////restart game
@@ -307,7 +308,7 @@ export function init(){
          orangeFoxes = [];
          silverFoxes = [];
          lastTime = 0;
-         player.life = 3;
+         player.life = 5;
          player.restart(); 
          bgm.play()        
          score = 0;
@@ -349,64 +350,80 @@ export function init(){
         const butterflypng = new Image();
         butterflypng.src = './asset/butterfly_angle2.png';
         ctx.drawImage(dogImage, 0,0, 200, 181, 80, 70, 40, 35);
-        ctx.drawImage(apple, canvas.width / 1.33, 76, 25, 25);
-        ctx.drawImage(heart ,canvas.width / 1.22, 80, 25, 25);
-        ctx.drawImage(butterflypng, 0, 0, 75, 70, canvas.width / 1.13, 70, 42, 42)
-        ctx.fillText(appleCount, canvas.width / 1.3 + 15, 96);
-        ctx.fillText(heartCount, canvas.width / 1.2 + 15, 96);
-        ctx.fillText(butterflyCount, canvas.width / 1.1 + 15, 96);
+        ctx.drawImage(apple, canvas.width / 1.4, 76, 25, 25);
+        ctx.drawImage(heart ,canvas.width / 1.25, 80, 25, 25);
+        ctx.drawImage(butterflypng, 0, 0, 75, 70, canvas.width / 1.15, 70, 42, 42)
+        ctx.font = '20px Arial';
+         ctx.fillText(appleCount, canvas.width / 1.36 + 15, 96);
+        ctx.fillText(heartCount, canvas.width / 1.22 + 15, 96);
+        ctx.fillText(butterflyCount, canvas.width / 1.12 + 15, 96);
     }
 
    /////level change 
-       levelUpBtn.addEventListener('click', () => {
-            fishes = []; 
-            chickens = [];
-            orangeFoxes = [];
-            silverFoxes = [];
-            lastTime = 0;
-            player.life++;
-            player.restart(); 
-            levelUpBtn.style.display = 'none';            
-            bgm.play();
-            score += 100;
-            gameOver = false;
-            animate(0);   
-        })
+     function levelUpBonus(){
+        fishes = []; 
+        chickens = [];
+        orangeFoxes = [];
+        silverFoxes = [];
+        lastTime = 0;
+         player.life++;
+        score += 100;
+     }               
+/// draw bonus text and set timeout
+    function drawTextBonus(){
+        ctx.font = '36px "Inknut Antiqua"';
+        ctx.fillText('BONUS', canvas.width/3 + 20, canvas.height/3 - 50);        
+        ctx.fillText('100 Point', canvas.width/3, canvas.height/3);        
+        ctx.fillText('+ 1 Life', canvas.width/3, canvas.height/3 + 50);        
+    }
+    function clearTextBonus(){
+        ctx.clearRect(0,0, canvas.widht, canvas.height);
+        gameOver = false;
+        animate(0);
+    }
+    function showTextBonus(){
+        drawTextBonus();
+        setTimeout(clearTextBonus, 5000)
+    }
                  
   /////layer change by score
-        function levelUp(){
+  function levelUp(){
         if(score <= 100){
             layerHandler(level1layers, player);
-            fishHandler(deltaTime);
-            
+            fishHandler(deltaTime); 
+            //showTextBonus();   
         } else if(score > 100 && score < 110){
-            bgm.pause();                            
-            gameOver = true;        
-            levelUpBtn.style.display = 'block'; 
+            magicBell.play();
+            gameOver = true;
+            levelUpBonus();
+            showTextBonus();            
         } else if (score <= 300){
             forest = 'NAHELE FOREST'; //HAWAIIAN TREE GROVE
             layerHandler(level2layers, player); 
             chickenHandler(ctx, deltaTime);           
         }  else if(score > 300 && score < 310){
-            bgm.pause();                            
-            gameOver = true;        
-            levelUpBtn.style.display = 'block'; 
+            magicBell.play();
+            gameOver = true;
+            levelUpBonus();
+            showTextBonus();
         } else if( score <= 500){
             forest = 'KEZIA FOREST'; // cassia tree        
             layerHandler(level3layers,player);
             orangeFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
         }  else if(score > 500 && score < 510){
-            bgm.pause();                            
-            gameOver = true;        
-            levelUpBtn.style.display = 'block'; 
+            magicBell.play();
+            gameOver = true;
+            levelUpBonus();
+            showTextBonus();
         } else if( score <= 700){
             forest = 'ARYWODE FOREST'; //from the fir forest
             layerHandler(level4layers, player);       
             silverFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
         } else if(score >700 && score < 710) {
-            bgm.pause();                            
-            gameOver = true;        
-            levelUpBtn.style.display = 'block'; 
+            magicBell.play();
+            gameOver = true;
+            levelUpBonus();
+            showTextBonus();
         }   
         else if(score <= 1000) {
             forest = 'WONDER FOREST';
@@ -423,7 +440,7 @@ export function init(){
             orangeFoxHandler(ctx, deltaTime, canvas.width, canvas.height); 
             silverFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
             fishHandler(deltaTime);
-        chickenHandler(ctx, deltaTime);
+            chickenHandler(ctx, deltaTime);
         }
     }
 
