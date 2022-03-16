@@ -45,11 +45,9 @@ export default class handleInput{
                      barkTwiceSound.play();
                      break;
                }   
-           }     
-           
-                        
-        })
-
+           }               
+        })             
+      
         window.addEventListener('keyup', (e) => {
             switch(e.key){
                 case 'ArrowLeft':
@@ -79,6 +77,54 @@ export default class handleInput{
             }
         })        
 
+      /////control button input/////
+        const jumpLeft = document.getElementById('jumpLeft');
+        const jumpRight = document.getElementById('jumpRight');
+        const runLeft = document.getElementById('runLeft');
+        const runRight = document.getElementById('runRight');
+        const rollLeft = document.getElementById('rollLeft');
+        const rollRight = document.getElementById('rollRight');
+
+        jumpLeft.addEventListener('mousedown', () => {
+            this.lastkey = "PRESS up";
+        })
+        jumpLeft.addEventListener('mouseup', () => {
+            this.lastkey = 'RELEASE up';
+        })
+        jumpRight.addEventListener('mousedown', () => {
+            this.lastkey = "PRESS up";
+        })
+        jumpRight.addEventListener('mouseup', () => {
+            this.lastkey = 'RELEASE up';
+        })
+
+        runLeft.addEventListener('mousedown', () => {
+            this.lastkey = "PRESS left";
+        })
+        runLeft.addEventListener('mouseup', () => {
+            this.lastkey = 'RELEASE left';
+        })
+
+        runRight.addEventListener('mousedown', () => {
+            this.lastkey = "PRESS right";
+        })
+        runRight.addEventListener('mouseup', () => {
+            this.lastkey = 'RELEASE right';
+        })
+
+        rollLeft.addEventListener('mousedown', () => {
+            this.lastkey = 'PRESS ctrl left';
+        })
+        rollLeft.addEventListener('mouseup', () => {
+            this.lastkey = 'RELEASE left';
+        })
+        rollRight.addEventListener('mousedown', () => {
+            this.lastkey = 'PRESS ctrl right';
+        })
+        rollRight.addEventListener('mouseup', () => {
+            this.lastkey = 'RELEASE right';
+        })
+ 
 
         ///// touchsreen ///// 
         ///// need to add 'swipe up' 'swipe down' in inputHandler at state.js 
