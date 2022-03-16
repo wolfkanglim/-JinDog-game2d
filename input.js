@@ -1,11 +1,11 @@
    const pantingSound = new Audio();
-    pantingSound.src = './asset/dog_panting.wav';    
+    pantingSound.src = 'sounds/sounds_dog_panting.mp3';    
     pantingSound.volume = 0.5;
   const barkTwiceSound = new Audio();
-    barkTwiceSound.src = './asset/dog-barking-twice.wav';    
+    barkTwiceSound.src = 'sounds/sounds_dog-barking-twice.wav';    
     barkTwiceSound.volume = 0.5;
     const fireBallSound = new Audio();
-    fireBallSound.src = './asset/fireball3.mp3';
+    fireBallSound.src = 'sounds/sounds_fireball3.mp3';
     fireBallSound.volume = 0.2;
 
 export default class handleInput{
