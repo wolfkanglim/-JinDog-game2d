@@ -31,16 +31,28 @@ bugs== proper reset, sudden speed occured,
 </head>
 <body>
     <header class="home-container" id="home">
+       <img id="hanging_board" src="./asset/wood_hanging.png">
         <h1 id="title">J I N  D O G </h1>
         <h3 id="subtitle">Jin!  Run! Jump! Have Fun!</h3>
         <h3 id="enter">Click or Press Enter to Start</h3>
         <p id="copyright">WONDROUS EAST 2022 COPYRIGHT</p>
         <canvas id="canvas_home"></canvas>
+      <img id="orangefoxBrushed" src="./asset/orangefox_brushed.png">
+        <!-- <img id="dog_stand" src="./asset/dog_white_stand.png"> -->
+        <img id="dog_jump" src="./asset/dog_white_jump.png" width="150">
     </header>   
 
     <main class="main-container" id="main">    
         <h1 id="loading">Loading...Dog State Animations</h1>
         <canvas id="canvas_main"></canvas>
+     
+       <!-- buttons for controls -->
+        <button class="controlBtn" id="jumpLeft">Jump Left</button>
+        <button class="controlBtn" id="runLeft">Run Left</button>
+        <button class="controlBtn" id="rollLeft">Roll Left</button>
+        <button class="controlBtn" id="jumpRight">Jump Right</button>
+        <button class="controlBtn" id="runRight">Run Right</button>
+        <button class="controlBtn" id="rollRight"> Roll Right</button>
 
         <!-- buttons for restart,pause, levelchangeg -->
         <button class="btn" id="levelUpBtn" onclick="levelUp">Mission Completed!<br>Bonus 100 Point<br><span> Press Enter or Click to continue</span></button>
@@ -48,14 +60,14 @@ bugs== proper reset, sudden speed occured,
         <button id="pauseBtn" onclick="pauseGame">PAUSE</button>
 
         <!-- images -->
-        <img id="dog_sprite" src="./asset/dog_white.png">
+        <image id="dog_sprite" src="./asset/dog_white.png">
         <image id="yellow_fish" src="./asset/fish_yellow_swim.png" alt="yellow fish"></image>
         <image id="blue_fish" src="./asset/fish_blue.png" alt="blue fish"></image>
         <image id="black_fish" src="./asset/fish_black_swim.png" alt="fish black"></image>
         <image id="red_fish" src="./asset/fish_red.png" alt="red fish"></image>
-        <image id="signboard" src="../imagesvs/woodHanging.png"></image>
-        <image id="apple" src="../imagesvs/apple8.png"></image>
-        <image id="heart" src="../imagesvs/heart4.png"></image>
+        <image id="signboard" src="./asset/wood_hanging.png"></image>
+        <image id="apple" src="./asset/apple8.png"></image>
+        <image id="heart" src="./asset/heart4.png"></image>
         <image id="orangeFox_run" src="./asset/orangeFox_run.png"></image>
         <image id="orangeFox_walk" src="./asset/orangeFox_walk.png"></image>
         <image id="orangeFox_jump" src="./asset/orangeFox_jump.png"></image>
@@ -72,7 +84,7 @@ bugs== proper reset, sudden speed occured,
         <audio id="bgm" src="./asset/bgm_jindog.mp3" loop></audio>
         <audio id="scoreBell" src="./asset/score_bell.mp3"></audio>
         <audio id="collisionSound" src="./asset/enemycollision.mp3"></audio>
-        
+         <audio id="magicBell" src="./asset/magic-bell.wav"></audio>
         <script type="module" src="./app.js"></script>
         <link rel="shortcut icon" href="#">
     </main>
