@@ -1,15 +1,15 @@
 //BG layers
 //let gameSpeed = 5;
 const bgLayer1 = new Image();
-bgLayer1.src = './asset/forest_bg_1/sky.png';
+bgLayer1.src = './background/forest_bg_1/sky.png';
 const bgLayer2 = new Image();
-bgLayer2.src = './asset/forest_bg_1/decor.png';
+bgLayer2.src = './background/forest_bg_1/decor.png';
 const bgLayer3 = new Image();
-bgLayer3.src = './asset/forest_bg_1/middle.png';
+bgLayer3.src = './background/forest_bg_1/middle.png';
 const bgLayer4 = new Image();
-bgLayer4.src = './asset/forest_bg_1/foreground.png';
+bgLayer4.src = './background/forest_bg_1/foreground.png';
 const bgLayer5 = new Image();
-bgLayer5.src = './asset/forest_bg_1/ground.png';
+bgLayer5.src = './background/forest_bg_1/ground.png';
 
 class Layer{
     constructor(image, speedModifier){
@@ -59,15 +59,15 @@ export const level1layers = [layer1, layer2, layer3, layer4, layer5];
 
 //level 2 layers 
 const bg2Layer1 = new Image();
-bg2Layer1.src = './asset/forest_bg_2/Sky.png';
+bg2Layer1.src = './background/forest_bg_2/Sky.png';
 const bg2Layer2 = new Image();
-bg2Layer2.src = './asset/forest_bg_2/BG_Decor.png';
+bg2Layer2.src = './background/forest_bg_2/BG_Decor.png';
 const bg2Layer3 = new Image();
-bg2Layer3.src = './asset/forest_bg_2/Middle_Decor.png';
+bg2Layer3.src = './background/forest_bg_2/Middle_Decor.png';
 const bg2Layer4 = new Image();
-bg2Layer4.src = './asset/forest_bg_2/Foreground.png';
+bg2Layer4.src = './background/forest_bg_2/Foreground.png';
 const bg2Layer5 = new Image();
-bg2Layer5.src = './asset/forest_bg_2/Ground.png';
+bg2Layer5.src = './background/forest_bg_2/Ground.png';
 
 const level2layer1 = new Layer(bg2Layer1, 0);
 const level2layer2 = new Layer(bg2Layer2, 0.001);
@@ -79,15 +79,15 @@ export const level2layers = [level2layer1, level2layer2, level2layer3, level2lay
 
 //level 3 layers 
 const bg3Layer1 = new Image();
-bg3Layer1.src = './asset/forest_bg_3/Sky.png';
+bg3Layer1.src = './background/forest_bg_3/Sky.png';
 const bg3Layer2 = new Image();
-bg3Layer2.src = './asset/forest_bg_3/BG_Decor.png';
+bg3Layer2.src = './background/forest_bg_3/BG_Decor.png';
 const bg3Layer3 = new Image();
-bg3Layer3.src = './asset/forest_bg_3/Middle_Decor.png';
+bg3Layer3.src = './background/forest_bg_3/Middle_Decor.png';
 const bg3Layer4 = new Image();
-bg3Layer4.src = './asset/forest_bg_3/Foreground.png';
+bg3Layer4.src = './background/forest_bg_3/Foreground.png';
 const bg3Layer5 = new Image();
-bg3Layer5.src = './asset/forest_bg_3/Ground.png';
+bg3Layer5.src = './background/forest_bg_3/Ground.png';
 
 const level3layer1 = new Layer(bg3Layer1, 0);
 const level3layer2 = new Layer(bg3Layer2, 0.001);
@@ -99,15 +99,15 @@ export const level3layers = [level3layer1, level3layer2, level3layer3, level3lay
 
 //level 4 layers 
 const bg4Layer1 = new Image();
-bg4Layer1.src = './asset/forest_bg_4/Sky.png';
+bg4Layer1.src = './background/forest_bg_4/Sky.png';
 const bg4Layer2 = new Image();
-bg4Layer2.src = './asset/forest_bg_4/BG_Decor.png';
+bg4Layer2.src = './background/forest_bg_4/BG_Decor.png';
 const bg4Layer3 = new Image();
-bg4Layer3.src = './asset/forest_bg_4/Middle_Decor.png';
+bg4Layer3.src = './background/forest_bg_4/Middle_Decor.png';
 const bg4Layer4 = new Image();
-bg4Layer4.src = './asset/forest_bg_4/Foreground.png';
+bg4Layer4.src = './background/forest_bg_4/Foreground.png';
 const bg4Layer5 = new Image();
-bg4Layer5.src = './asset/forest_bg_4/Ground.png';
+bg4Layer5.src = './background/forest_bg_4/Ground.png';
 
 const level4layer1 = new Layer(bg4Layer1, 0);
 const level4layer2 = new Layer(bg4Layer2, 0.001);
