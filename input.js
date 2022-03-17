@@ -133,25 +133,6 @@ export default class handleInput{
         })
         rollRight.addEventListener('mouseup', () => {
             this.lastkey = 'RELEASE right';
-        })
- 
-
-        ///// touchsreen ///// 
-        ///// need to add 'swipe up' 'swipe down' in inputHandler at state.js 
-
-        window.addEventListener('touchstart', (e) => {
-            this.touchY = e.changedTouches[0].pageY;
-        })
-        window.addEventListener('touchmove', (e) => {
-            console.log('move');
-            let swipeDistance = e.changedTouches[0].pageY - this.touchY;
-            if(swipeDistance < - this.touchTreshold && this.lastkey.indexOf('swipe up') === -1) this.lastkey.push('swipe up');
-            else if(swipeDistance > this.touchTreshold && this.lastkey.indexOf('swipe down') === -1) this.lastkey.push('swipe down');
-        })
-        window.addEventListener('touchend', (e) => {
-            console.log('end');
-            this.lastkey.splice(this.lastkey.indexOf('swipe up'), 1);
-            this.lastkey.splice(this.lastkey.indexOf('swipe down'), 1);
-        })
-    }
+        }) 
+     }
 }
