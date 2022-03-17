@@ -18,7 +18,7 @@ body {
     width: 100%;
     /* background-color: black; */
     position: relative;
-    background-image: url('./asset/forest_bg_4/Middle_Decor.png');
+    background-image: url('./background/forest_bg_4/Middle_Decor.png');
     background-size: cover;
     height: 100vh;
     display:flex;
