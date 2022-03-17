@@ -1,6 +1,6 @@
-   const pantingSound = new Audio();
-    pantingSound.src = 'sounds/sounds_dog_panting.mp3';    
-    pantingSound.volume = 0.5;
+//    const pantingSound = new Audio();
+//     pantingSound.src = 'sounds/sounds_dog_panting.mp3';    
+//     pantingSound.volume = 0.5;
   const barkTwiceSound = new Audio();
     barkTwiceSound.src = 'sounds/sounds_dog-barking-twice.wav';    
     barkTwiceSound.volume = 0.5;
@@ -27,13 +27,13 @@ export default class handleInput{
            else if(!e.ctrlKey){
                 switch(e.key){
                  case 'ArrowLeft':
-                     pantingSound.currentTime = 0;                       
-                     pantingSound.play();                      
+//                      pantingSound.currentTime = 0;                       
+//                      pantingSound.play();                      
                      this.lastkey = "PRESS left";                         
                      break;
                  case 'ArrowRight':
-                     pantingSound.currentTime = 0;
-                    pantingSound.play();
+//                      pantingSound.currentTime = 0;
+//                     pantingSound.play();
                     this.lastkey = "PRESS right";
                     break;        
                  case 'ArrowDown':                    
@@ -63,8 +63,8 @@ export default class handleInput{
                     this.lastkey = 'RELEASE up';
                     break;    
             }
-            pantingSound.currentTime = 0;                       
-                     pantingSound.play();    
+//             pantingSound.currentTime = 0;                       
+//                      pantingSound.play();    
         }) 
         
         /////mouse toggle for Pause Game///// 
