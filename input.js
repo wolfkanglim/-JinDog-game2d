@@ -63,6 +63,8 @@ export default class handleInput{
                     this.lastkey = 'RELEASE up';
                     break;    
             }
+            pantingSound.currentTime = 0;                       
+                     pantingSound.play();    
         }) 
         
         /////mouse toggle for Pause Game///// 
@@ -87,12 +89,16 @@ export default class handleInput{
 
         jumpLeft.addEventListener('mousedown', () => {
             this.lastkey = "PRESS up";
+             barkTwiceSound.currentTime = 0;
+                     barkTwiceSound.play();
         })
         jumpLeft.addEventListener('mouseup', () => {
             this.lastkey = 'RELEASE up';
         })
         jumpRight.addEventListener('mousedown', () => {
             this.lastkey = "PRESS up";
+             barkTwiceSound.currentTime = 0;
+                     barkTwiceSound.play();
         })
         jumpRight.addEventListener('mouseup', () => {
             this.lastkey = 'RELEASE up';
@@ -114,12 +120,16 @@ export default class handleInput{
 
         rollLeft.addEventListener('mousedown', () => {
             this.lastkey = 'PRESS ctrl left';
+             fireBallSound.currentTime = 0;
+                fireBallSound.play();
         })
         rollLeft.addEventListener('mouseup', () => {
             this.lastkey = 'RELEASE left';
         })
         rollRight.addEventListener('mousedown', () => {
             this.lastkey = 'PRESS ctrl right';
+             fireBallSound.currentTime = 0;
+                fireBallSound.play();
         })
         rollRight.addEventListener('mouseup', () => {
             this.lastkey = 'RELEASE right';
