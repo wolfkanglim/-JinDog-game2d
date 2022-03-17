@@ -19,7 +19,7 @@ window.addEventListener('load', function(){
   let butterflies = [];
    let lastTime = 0;
    let speedY = Math.random() * 1.5 -1;
-   let deltaTime;
+   
   for(let i = 0; i < 5; i++){
           butterflies.push(new Butterfly(canvasHome.width, canvasHome.height));
       }
