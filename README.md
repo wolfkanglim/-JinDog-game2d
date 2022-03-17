@@ -2,12 +2,13 @@
 2d game JavaScript Feb 2022
 Created using sprite  sheets / javascript
 
-## Jindog story![17 03 2022_08 30 21_REC](https://user-images.githubusercontent.com/74490365/158809051-c79eaec9-11b3-4144-89bf-40276a13b477.png)
-
+![17 03 2022_08 30 21_REC](https://user-images.githubusercontent.com/74490365/158809051-c79eaec9-11b3-4144-89bf-40276a13b477.png)
+## Jindog story
 Jin dog named from Jindo dog originally breeded from Jindo Island South Korea.
 Jindog is lost a dog and journey back to home.
 jump and run through wondrous forest, jump over enemies, collect apples, hearts, butterflies
-
+## Lets play!
+https://wolfkanglim.github.io/-JinDog-game2d/
 ### How to play
 Run left ; Left Arrow key on keyboard or touch buttons on screen
   Run Right ; Right Arrow key on keyboard or touch buttons on screen
