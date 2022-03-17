@@ -8,7 +8,7 @@ window.addEventListener('load', function(){
     canvasHome.height = window.innerHeight;
     const home = document.getElementById('home');
     const main = document.getElementById('main');
-  let deltaTime;
+ 
     home.addEventListener('click', () => {
         home.style.display = 'none';
         main.style.display = 'block';
@@ -19,7 +19,7 @@ window.addEventListener('load', function(){
   let butterflies = [];
    let lastTime = 0;
    let speedY = Math.random() * 1.5 -1;
-   
+    let deltaTime;
   for(let i = 0; i < 5; i++){
           butterflies.push(new Butterfly(canvasHome.width, canvasHome.height));
       }
