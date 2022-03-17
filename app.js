@@ -20,13 +20,13 @@ window.addEventListener('load', function(){
    let lastTime = 0;
    let speedY = Math.random() * 1.5 -1;
    //let deltaTime;
-   let deltaTime;
+  
     for(let i = 0; i < 5; i++){
           butterflies.push(new Butterfly(canvasHome.width, canvasHome.height));
       }
 
   function flyHome(timeStamp){
-      deltaTime = timeStamp - lastTime;
+      let deltaTime = timeStamp - lastTime;
       lastTime = timeStamp;
       ctxHome.clearRect(0, 0, canvasHome.width, canvasHome.height);
       for(let i = 0; i < butterflies.length; i++){
