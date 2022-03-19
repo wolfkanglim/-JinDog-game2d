@@ -85,10 +85,10 @@ body {
 }
 #canvas_main {
     font-family: 'Inknut Antiqua', serif;
-    position: absolute;
+/*     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     background-color: rgb(52, 76, 97);
     background-image: url('./background/forest_bg_3/Middle_Decor.png');
     background-size: cover;
