@@ -10,7 +10,7 @@ export class Chicken {
         this.frameY = 0;
         this.maxFrame = maxFrame;
         this.x = this.gameWidth + this.width * 3;
-        this.y = y;
+        this.y = y - 15;
         this.speed = speed;
         this.radius = 10;
         this.speed = speed + Math.random() * 2;          
