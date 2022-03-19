@@ -317,7 +317,7 @@ export function init(){
          animate(0);
     }
   
-         ///canvas reset 
+    /////canvas reset ////// 
         canvas.addEventListener('click', () => {
             if(!gameOver){
                 bgm.pause();                    
@@ -330,6 +330,29 @@ export function init(){
                 }          
         })
 
+       /////canvas pause and how to play /////
+         const paused = document.getElementById('paused');
+        window.addEventListener('click', () => {
+            if(!gameOver){
+                bgm.pause();                    
+                gameOver = true;
+                paused.style.display = 'block';
+                }     
+                else {
+                bgm.play();
+                gameOver = false;
+                paused.style.display = 'none';
+                animate(0);
+                }          
+        })
+
+        /////dbl click stop  game back to home/////
+        window.addEventListener('dblclick', () => {
+            gameOver = true;
+            home.style.display = 'block';
+            main.style.display = 'none';
+        })
+     
     function bonusGame(){
             fishes = []; 
             chickens = [];
