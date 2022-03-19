@@ -25,10 +25,10 @@ bugs== proper reset, sudden speed occured,
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dongle:wght@300&family=Inknut+Antiqua:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">   
 </head>
+ 
 <body>
     <header class="home-container" id="home">
        <img id="hanging_board" src="./asset/wood_hanging.png">
@@ -47,12 +47,12 @@ bugs== proper reset, sudden speed occured,
         <canvas id="canvas_main"></canvas>
      
        <!-- buttons for controls -->
-        <button class="controlBtn" id="jumpLeft">Jump</button>
-        <button class="controlBtn" id="runLeft">Run Left</button>
-        <button class="controlBtn" id="rollLeft">Roll Left</button>
-        <button class="controlBtn" id="jumpRight">Jump</button>
-        <button class="controlBtn" id="runRight">Run Right</button>
-        <button class="controlBtn" id="rollRight"> Roll Right</button>
+         <button class="controlBtn" id="jumpLeft"><i class="fa fa-arrow-circle-up" style="font-size:30px;color:white"></i>Jump</button>
+        <button class="controlBtn" id="runLeft"><i class="fa fa-arrow-circle-left" style="font-size:30px;color:white"></i>Run</button>
+        <button class="controlBtn" id="rollLeft"><i class="fa fa-refresh" style="font-size:30px;color:white"></i>Roll</button>
+        <button class="controlBtn" id="jumpRight"><i class="fa fa-arrow-circle-up" style="font-size:30px;color:white"></i>Jump</button>
+        <button class="controlBtn" id="runRight"><i class="fa fa-arrow-circle-right" style="font-size:30px;color:white"></i>Run</button>
+        <button class="controlBtn" id="rollRight"><i class="fa fa-refresh" style="font-size:30px;color:rgb(252, 249, 249)"></i>Roll</button>
 
         <!-- buttons for restart,pause, levelchangeg -->
         <button class="btn" id="restartBtn" > GAME OVER<br><span> Press Enter or Click to restart</span></button>
