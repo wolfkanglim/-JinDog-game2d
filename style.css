@@ -171,6 +171,9 @@ body {
      top: calc(15% + 120px);
     right: 0;
 }
+.fa {
+    display: block;
+}
 
 /* Responsive web */
 @media screen and (max-height: 300px {
