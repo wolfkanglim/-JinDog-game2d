@@ -172,6 +172,22 @@ body {
 }
 
 /* Responsive web */
+@media screen and (max-height: 300px {
+    .controlBtn {
+    height: 45px;
+    }
+}
+@media screen and (min-height: 700px) {
+    .controlBtn {
+        height: 75px;
+    }
+    #jumpLeft, #jumpRight {
+        top: 35%;
+    }
+    #rollLeft, #rollRight {
+        top: 55%;
+    }
+}
 @media screen and (max-width: 450px) {
     #hanging_board{
         width: 95%;
