@@ -11,7 +11,7 @@ import {Fox} from './enemyfox.js';
 
 export function init(){
      const loading = document.getElementById('loading');
-    loading.style.display = 'block'; 
+    loading.style.display = 'none'; 
 
     
     const canvas = document.getElementById('canvas_main');
@@ -463,7 +463,7 @@ export function init(){
         collisionEnemy(chickens);
         collisionEnemy(fishes);
         drawText();
-        drawStatusText(ctx, input, player);        
+//         drawStatusText(ctx, input, player);        
         if(!gameOver) requestAnimationFrame(animate);
         }
       animate(0);
