@@ -146,29 +146,29 @@ body {
     border-radius: 5px;
 }
 #jumpLeft{
-    top: 26%;
+    top: 20%;
     left: 0;
 }
 #runLeft{
     width: 70px;
-    top: calc(26% + 60px);
+    top: calc(20% + 60px);
     left: 0;
 }
 #rollLeft{
-    top: calc(26% + 120px);
+    top: calc(20% + 120px);
     left: 0;
 }
 #jumpRight{
-    top: 26%;
+    top: 20%;
     right: 0px;
 }
 #runRight{
     width: 70px;
-     top: calc(26% + 60px);
+     top: calc(20% + 60px);
     right: 0;
 }
 #rollRight{
-     top: calc(26% + 120px);
+     top: calc(20% + 120px);
     right: 0;
 }
 
