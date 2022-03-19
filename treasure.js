@@ -6,7 +6,7 @@ export default class Treasure{
         this.width = 30;
         this.height = 30;
         this.x = this.gameWidth;
-        this.y = ((Math.random() * this.gameHeight) - 120) + 10;
+        this.y = ((Math.random() * this.gameHeight) - 120) - 10;
         this.speed = Math.random() * 9 + 1;
         this.markedForDeletion = false;
     }
