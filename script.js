@@ -16,8 +16,8 @@ export function init(){
     
     const canvas = document.getElementById('canvas_main');
     const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight; 
+    canvas.width = 1400;
+    canvas.height = 720; 
     
     let deltaTime, score;
     let gameOver = false;
@@ -308,7 +308,7 @@ export function init(){
          orangeFoxes = [];
          silverFoxes = [];
          lastTime = 0;
-         player.life = 5;
+         player.life = 10;
          player.restart(); 
          bgm.play()        
          score = 0;
