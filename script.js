@@ -108,9 +108,9 @@ export function init(){
 
     function chickenHandler(context, deltaTime){
         if(chickenTimer > chickenInterval + Math.random() * 8000){
-            const chickenWalk = new Chicken(chickenWalkImage, canvas.width, canvas.height, 15, canvas.height - 90, 0.01);
-            const chickenFall = new Chicken(chickenFallImage, canvas.width, canvas.height, 19, canvas.height - 90, 1);
-            const chickenFlying = new Chicken(chickenFlyingImage, canvas.width, canvas.height, 27, canvas.height - 90, 3);
+            const chickenWalk = new Chicken(chickenWalkImage, canvas.width, canvas.height, 15, canvas.height - 130, 0.01);
+            const chickenFall = new Chicken(chickenFallImage, canvas.width, canvas.height, 19, canvas.height - 130, 1);
+            const chickenFlying = new Chicken(chickenFlyingImage, canvas.width, canvas.height, 27, canvas.height - 130, 3);
             let randomChicken = [chickenWalk, chickenFall, chickenFlying]; 
             let random = Math.floor(Math.random() * 3);
             chickens.push(randomChicken[random]);
