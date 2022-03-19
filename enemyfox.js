@@ -11,7 +11,7 @@
         this.frameY = 0;
         this.maxFrame = maxFrame;
         this.x = this.gameWidth + this.width * 3;
-        this.y = this.gameHeight - this.height / 2 - 25;
+        this.y = this.gameHeight - this.height;
         this.radius = 25;
         this.speed = speed;
         this.fps = 30;
