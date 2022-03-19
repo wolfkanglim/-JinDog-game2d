@@ -87,7 +87,8 @@ export default class handleInput{
         const rollLeft = document.getElementById('rollLeft');
         const rollRight = document.getElementById('rollRight');
 
-        jumpLeft.addEventListener('touchstart', () => {
+        jumpLeft.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = "PRESS up";
              barkTwiceSound.currentTime = 0;
                      barkTwiceSound.play();
@@ -95,7 +96,8 @@ export default class handleInput{
         jumpLeft.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE up';
         })
-        jumpRight.addEventListener('touchstart', () => {
+        jumpRight.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = "PRESS up";
              barkTwiceSound.currentTime = 0;
                      barkTwiceSound.play();
@@ -104,21 +106,24 @@ export default class handleInput{
             this.lastkey = 'RELEASE up';
         })
 
-        runLeft.addEventListener('touchstart', () => {
+        runLeft.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = "PRESS left";
         })
         runLeft.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE left';
         })
 
-        runRight.addEventListener('touchstart', () => {
+        runRight.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = "PRESS right";
         })
         runRight.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE right';
         })
 
-        rollLeft.addEventListener('touchstart', () => {
+        rollLeft.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = 'PRESS ctrl left';
              fireBallSound.currentTime = 0;
                 fireBallSound.play();
@@ -126,7 +131,8 @@ export default class handleInput{
         rollLeft.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE left';
         })
-        rollRight.addEventListener('touchstart', () => {
+        rollRight.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = 'PRESS ctrl right';
              fireBallSound.currentTime = 0;
                 fireBallSound.play();
