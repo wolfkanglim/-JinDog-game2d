@@ -6,7 +6,7 @@ export default class Fish{
         this.width = 498;
         this.height = 327;
         this.x = gameWidth;
-        this.y = gameHeight - this.height / 3 + 20;
+        this.y = gameHeight - this.height / 3 - 30;
         this.frameX = 0;
         this.frameY = 0;
         this.speed = Math.random() * 1 + 0.01;
