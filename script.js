@@ -332,7 +332,7 @@ export function init(){
 
        /////canvas pause and how to play /////
          const paused = document.getElementById('paused');
-        window.addEventListener('click', () => {
+        canvas.addEventListener('click', () => {
             if(!gameOver){
                 bgm.pause();                    
                 gameOver = true;
@@ -347,7 +347,7 @@ export function init(){
         })
 
         /////dbl click stop  game back to home/////
-        window.addEventListener('dblclick', () => {
+       canvas.addEventListener('dblclick', () => {
             gameOver = true;
             home.style.display = 'block';
             main.style.display = 'none';
