@@ -85,15 +85,16 @@ body {
 }
 #canvas_main {
     font-family: 'Inknut Antiqua', serif;
-/*     position: absolute;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100vh;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     background-color: rgb(52, 76, 97);
     background-image: url('./background/forest_bg_3/Middle_Decor.png');
     background-size: cover;
-    max-width: 100%;
-    max-height: 100vh;
+   
 }
 #loading{
     position: absolute;
