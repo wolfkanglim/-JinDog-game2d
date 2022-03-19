@@ -143,6 +143,7 @@ body {
     color: white;
     background-color: rgba(25,25,25, 0.8);
     display: none;
+    z-index: 10;
 }
 
 #dog_sprite, #yellow_fish, #apple, #blue_fish, #black_fish, #red_fish,#signboard, #heart, #orangeFox_jump,#orangeFox_run, #orangeFox_walk, #orangeFox_taunt, #orangeFox_pause, #silverFox_walk, #silverFox_run, #silverFox_jump, #chickenFlying, #chickenWalk, #chickenFall {
