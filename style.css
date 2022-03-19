@@ -133,6 +133,18 @@ body {
     font-size: 1.2rem;
     text-align: justify;
 }
+#paused {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 70%;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: rgba(25,25,25, 0.8);
+    display: none;
+}
+
 #dog_sprite, #yellow_fish, #apple, #blue_fish, #black_fish, #red_fish,#signboard, #heart, #orangeFox_jump,#orangeFox_run, #orangeFox_walk, #orangeFox_taunt, #orangeFox_pause, #silverFox_walk, #silverFox_run, #silverFox_jump, #chickenFlying, #chickenWalk, #chickenFall {
     display: none;
 }
