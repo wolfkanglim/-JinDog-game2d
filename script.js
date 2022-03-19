@@ -317,29 +317,24 @@ export function init(){
          animate(0);
     }
   
-        /////canvas pause and how to play /////
+       ///canvas pause and how to play
          const paused = document.getElementById('paused');
         canvas.addEventListener('click', () => {
             if(!gameOver){
                 bgm.pause();                    
                 gameOver = true;
                 paused.style.display = 'block';
-                }     
-                else {
-                bgm.play();
+                }    
+        })
+        paused.addEventListener('click', () => {
+             bgm.play();
                 gameOver = false;
                 paused.style.display = 'none';
                 animate(0);
-                }          
-        })
+        }) 
+               
 
-        /////dbl click stop  game back to home/////
-       canvas.addEventListener('dblclick', () => {
-            gameOver = true;
-            home.style.display = 'block';
-            main.style.display = 'none';
-        })
-     
+            
     function bonusGame(){
             fishes = []; 
             chickens = [];
