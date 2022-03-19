@@ -317,20 +317,7 @@ export function init(){
          animate(0);
     }
   
-    /////canvas reset ////// 
-        canvas.addEventListener('click', () => {
-            if(!gameOver){
-                bgm.pause();                    
-                gameOver = true;
-                }     
-                else {
-                bgm.play();
-                gameOver = false;
-                animate(0);
-                }          
-        })
-
-       /////canvas pause and how to play /////
+        /////canvas pause and how to play /////
          const paused = document.getElementById('paused');
         canvas.addEventListener('click', () => {
             if(!gameOver){
