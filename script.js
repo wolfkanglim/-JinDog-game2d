@@ -463,7 +463,7 @@ export function init(){
         collisionEnemy(chickens);
         collisionEnemy(fishes);
         drawText();
-//         drawStatusText(ctx, input, player);        
+        drawStatusText(ctx, input, player);        
         if(!gameOver) requestAnimationFrame(animate);
         }
       animate(0);
