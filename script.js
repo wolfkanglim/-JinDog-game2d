@@ -298,9 +298,9 @@ export function init(){
 /////restart game
     restartBtn.addEventListener('click', restartGame);
     endingBtn.addEventListener('click', bonusGame);
-    window.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter') restartGame();
-    })
+//     window.addEventListener('keydown', (e) => {
+//         if(e.key === 'Enter') restartGame();
+//     })
 
     function restartGame(){
          fishes = []; 
