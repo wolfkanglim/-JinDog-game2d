@@ -327,6 +327,7 @@ export function init(){
                 bgm.play();
                 gameOver = false;              
                 animate(0);
+               }
         })
                   
                  
