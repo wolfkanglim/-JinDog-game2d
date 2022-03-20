@@ -74,53 +74,53 @@ export default class handleInput{
         const rollLeft = document.getElementById('rollLeft');
         const rollRight = document.getElementById('rollRight');
 
-         jumpLeft.addEventListener('mousedown', () => {
+         jumpLeft.addEventListener('touchstart', () => {
             this.lastkey = "PRESS up";
             barkTwiceSound.currentTime = 0;
             barkTwiceSound.play();
         })
-        jumpLeft.addEventListener('mouseup', () => {
+        jumpLeft.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE up';
         })
-        jumpRight.addEventListener('mousedown', () => {
+        jumpRight.addEventListener('touchstart', () => {
             this.lastkey = "PRESS up";
             barkTwiceSound.currentTime = 0;
             barkTwiceSound.play();
         })
-        jumpRight.addEventListener('mouseup', () => {
+        jumpRight.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE up';
         })
 
-        runLeft.addEventListener('mousedown', () => {
+        runLeft.addEventListener('touchstart', () => {
             this.lastkey = "PRESS left";
         })
-        runLeft.addEventListener('mouseup', () => {
+        runLeft.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE left';
            // pantingSound.play();  
         })
 
-        runRight.addEventListener('mousedown', () => {
+        runRight.addEventListener('touchstart', () => {
             this.lastkey = "PRESS right";
         })
-        runRight.addEventListener('mouseup', () => {
+        runRight.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE right';
            // pantingSound.play();  
         })
 
-        rollLeft.addEventListener('mousedown', () => {
+        rollLeft.addEventListener('touchstart', () => {
             this.lastkey = 'PRESS ctrl left';
             fireBallSound.play();
             fireBallSound.currentTime = 0;
         })
-        rollLeft.addEventListener('mouseup', () => {
+        rollLeft.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE left';
         })
-        rollRight.addEventListener('mousedown', () => {
+        rollRight.addEventListener('touchstart', () => {
             this.lastkey = 'PRESS ctrl right';
             fireBallSound.play();
             fireBallSound.currentTime = 0;
         })
-        rollRight.addEventListener('mouseup', () => {
+        rollRight.addEventListener('touchend', () => {
             this.lastkey = 'RELEASE right';
         })
 
