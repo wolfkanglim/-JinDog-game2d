@@ -87,7 +87,7 @@ export default class handleInput{
         const rollRight = document.getElementById('rollRight');
 
         jumpLeft.addEventListener('touchstart', (e) => {
-          e.preventDefault();
+            //e.preventDefault();
             this.lastkey = "PRESS up";
              barkTwiceSound.currentTime = 0;
                      barkTwiceSound.play();
@@ -96,7 +96,7 @@ export default class handleInput{
             this.lastkey = 'RELEASE up';
         })
         jumpRight.addEventListener('touchstart', (e) => {
-          e.preventDefault();
+          //e.preventDefault();
             this.lastkey = "PRESS up";
              barkTwiceSound.currentTime = 0;
                      barkTwiceSound.play();
@@ -106,7 +106,7 @@ export default class handleInput{
         })
 
         runLeft.addEventListener('touchstart', (e) => {
-          e.preventDefault();
+          //e.preventDefault();
             this.lastkey = "PRESS left";
         })
         runLeft.addEventListener('touchend', () => {
@@ -114,7 +114,7 @@ export default class handleInput{
         })
 
         runRight.addEventListener('touchstart', (e) => {
-          e.preventDefault();
+          //e.preventDefault();
             this.lastkey = "PRESS right";
         })
         runRight.addEventListener('touchend', () => {
@@ -122,7 +122,7 @@ export default class handleInput{
         })
 
         rollLeft.addEventListener('touchstart', (e) => {
-          e.preventDefault();
+          //e.preventDefault();
             this.lastkey = 'PRESS ctrl left';
              fireBallSound.currentTime = 0;
                 fireBallSound.play();
@@ -131,7 +131,7 @@ export default class handleInput{
             this.lastkey = 'RELEASE left';
         })
         rollRight.addEventListener('touchstart', (e) => {
-          e.preventDefault();
+          //e.preventDefault();
             this.lastkey = 'PRESS ctrl right';
              fireBallSound.currentTime = 0;
                 fireBallSound.play();
