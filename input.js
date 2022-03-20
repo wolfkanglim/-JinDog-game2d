@@ -68,16 +68,15 @@ export default class handleInput{
         }) 
         
         /////mouse toggle for Pause Game///// 
-        window.addEventListener('mouseclick', (e) => {
-
-            console.log('pause');
-            console.log(e);
-            if(!gameOver){
-                gameOver = true;
-            } else {
-                gameOver = false;
-            }
-        })        
+//         window.addEventListener('mouseclick', (e) => {
+//             console.log('pause');
+//             console.log(e);
+//             if(!gameOver){
+//                 gameOver = true;
+//             } else {
+//                 gameOver = false;
+//             }
+//         })        
 
       /////control button input/////
         const jumpLeft = document.getElementById('jumpLeft');
