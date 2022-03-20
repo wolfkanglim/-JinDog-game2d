@@ -321,10 +321,10 @@ export function init(){
          const paused = document.getElementById('paused');
         window.addEventListener('touchstart', () => {
              if(!gameOver){
+                paused.style.display = 'block';  
                 bgm.pause();                    
-                gameOver = true;                 
-                paused.style.display = 'block';
-                }    
+                gameOver = true;               
+               }    
         })
         paused.addEventListener('click', () => {
              bgm.play();
