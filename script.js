@@ -74,7 +74,7 @@ export function init(){
     const fishRedImage = document.getElementById('red_fish')
 
     let fishTimer = 0;
-    let fishInterval = 5000 + Math.random() * 5000;
+    let fishInterval = 10000 + Math.random() * 5000;
     let fishes = [];
 
     function fishHandler(deltaTime){
@@ -103,7 +103,7 @@ export function init(){
     const chickenFallImage = document.getElementById('chickenFall');
 
     let chickenTimer = 0;
-    let chickenInterval = Math.random() * 5000 + 3000;
+    let chickenInterval = Math.random() * 5000 + 7000;
     let chickens = [];
 
     function chickenHandler(context, deltaTime){
@@ -126,7 +126,7 @@ export function init(){
 
 /////enemy  orangefox handler
     let foxTimer = 0;
-    let foxInterval = 3000 + Math.random() * 4000;
+    let foxInterval = 5000 + Math.random() * 4000;
     let orangeFoxes = [];
     const orangeFoxWalkImage = document.getElementById('orangeFox_walk');
     const orangeFoxRunImage = document.getElementById('orangeFox_run');
