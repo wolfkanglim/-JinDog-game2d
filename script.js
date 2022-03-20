@@ -319,7 +319,7 @@ export function init(){
   
        ///canvas pause and how to play
          const paused = document.getElementById('paused');
-        canvas.addEventListener('click', () => {
+        canvas.addEventListener('touchstart', () => {
             if(!gameOver){
                 bgm.pause();                    
                 gameOver = true;
