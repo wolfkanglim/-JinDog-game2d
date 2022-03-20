@@ -74,11 +74,11 @@ export function init(){
     const fishRedImage = document.getElementById('red_fish')
 
     let fishTimer = 0;
-    let fishInterval = 10000 + Math.random() * 5000;
+    let fishInterval = 10000 + Math.random() * 10000;
     let fishes = [];
 
     function fishHandler(deltaTime){
-        if(fishTimer > fishInterval + Math.random() * 8000){
+        if(fishTimer > fishInterval + Math.random() * 10000){
             const fishYellow = new Fish(fishYellowImage, canvas.width, canvas.height);
             const fishBlue = new Fish(fishBlueImage, canvas.width, canvas.height);
             const fishBlack = new Fish(fishBlackImage, canvas.width, canvas.height);
@@ -103,11 +103,11 @@ export function init(){
     const chickenFallImage = document.getElementById('chickenFall');
 
     let chickenTimer = 0;
-    let chickenInterval = Math.random() * 5000 + 7000;
+    let chickenInterval = Math.random() * 10000 + 10000;
     let chickens = [];
 
     function chickenHandler(context, deltaTime){
-        if(chickenTimer > chickenInterval + Math.random() * 8000){
+        if(chickenTimer > chickenInterval + Math.random() * 10000){
             const chickenWalk = new Chicken(chickenWalkImage, canvas.width, canvas.height, 15, canvas.height - 130, 0.01);
             const chickenFall = new Chicken(chickenFallImage, canvas.width, canvas.height, 19, canvas.height - 130, 1);
             const chickenFlying = new Chicken(chickenFlyingImage, canvas.width, canvas.height, 27, canvas.height - 130, 3);
@@ -126,7 +126,7 @@ export function init(){
 
 /////enemy  orangefox handler
     let foxTimer = 0;
-    let foxInterval = 5000 + Math.random() * 4000;
+    let foxInterval = 10000 + Math.random() * 10000;
     let orangeFoxes = [];
     const orangeFoxWalkImage = document.getElementById('orangeFox_walk');
     const orangeFoxRunImage = document.getElementById('orangeFox_run');
