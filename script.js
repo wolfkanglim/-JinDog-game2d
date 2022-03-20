@@ -126,7 +126,7 @@ export function init(){
 
 /////enemy  orangefox handler
     let foxTimer = 0;
-    let foxInterval = 10000 + Math.random() * 10000;
+    let foxInterval = 10000 + Math.random() * 20000;
     let orangeFoxes = [];
     const orangeFoxWalkImage = document.getElementById('orangeFox_walk');
     const orangeFoxRunImage = document.getElementById('orangeFox_run');
