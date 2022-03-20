@@ -91,10 +91,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(52, 76, 97);
-    background-image: url('./background/forest_bg_3/Middle_Decor.png');
-    background-size: cover;
-   
+    background-color: rgb(21, 63, 37);
+     
 }
 #loading{
     position: absolute;
@@ -160,30 +158,30 @@ body {
     border-radius: 5px;
 }
 #jumpLeft{
-    top: 15%;
-    left: 0;
+    top: calc(50% - 130px);
+    left: 5px;
 }
 #runLeft{
     width: 70px;
-    top: calc(15% + 60px);
-    left: 0;
+    top: calc(50% - 65px);
+    left: 5px;
 }
 #rollLeft{
-    top: calc(15% + 120px);
-    left: 0;
+    top: 50%;
+    left: 5px;
 }
 #jumpRight{
-    top: 15%;
-    right: 0px;
+    top: calc(50% - 130px);
+    right: 5px;
 }
 #runRight{
     width: 70px;
-     top: calc(15% + 60px);
-    right: 0;
+     top: calc(50% - 65px);
+    right: 5px;
 }
 #rollRight{
-     top: calc(15% + 120px);
-    right: 0;
+     top: 50%;
+    right: 5px;
 }
 .fa {
     display: block;
