@@ -96,7 +96,7 @@ export default class handleInput{
         })
         runLeft.addEventListener('mouseup', () => {
             this.lastkey = 'RELEASE left';
-            pantingSound.play();  
+           // pantingSound.play();  
         })
 
         runRight.addEventListener('mousedown', () => {
@@ -104,7 +104,7 @@ export default class handleInput{
         })
         runRight.addEventListener('mouseup', () => {
             this.lastkey = 'RELEASE right';
-            pantingSound.play();  
+           // pantingSound.play();  
         })
 
         rollLeft.addEventListener('mousedown', () => {
