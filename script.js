@@ -322,8 +322,7 @@ export function init(){
         canvas.addEventListener('touchstart', () => {
             if(!gameOver){
                 bgm.pause();                    
-                gameOver = true;
-                 endingBtn.style.display = 'block'; //test
+                gameOver = true;                 
                 paused.style.display = 'block';
                 }    
         })
