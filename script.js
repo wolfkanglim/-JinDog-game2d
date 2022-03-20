@@ -323,6 +323,7 @@ export function init(){
             if(!gameOver){
                 bgm.pause();                    
                 gameOver = true;
+                 endingBtn.style.display = 'block'; //test
                 paused.style.display = 'block';
                 }    
         })
