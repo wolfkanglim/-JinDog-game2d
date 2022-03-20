@@ -74,72 +74,67 @@ export default class handleInput{
         const rollLeft = document.getElementById('rollLeft');
         const rollRight = document.getElementById('rollRight');
 
-         jumpLeft.addEventListener('touchstart', () => {
+         jumpLeft.addEventListener('touchstart', (e) => {
+           e.preventDefault();
             this.lastkey = "PRESS up";
             barkTwiceSound.currentTime = 0;
             barkTwiceSound.play();
         })
-        jumpLeft.addEventListener('touchend', () => {
+        jumpLeft.addEventListener('touchend', (e) => {
+          e.preventDefault();
             this.lastkey = 'RELEASE up';
         })
-        jumpRight.addEventListener('touchstart', () => {
+        jumpRight.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = "PRESS up";
             barkTwiceSound.currentTime = 0;
             barkTwiceSound.play();
         })
-        jumpRight.addEventListener('touchend', () => {
+        jumpRight.addEventListener('touchend', (e) => {
+          e.preventDefault();
             this.lastkey = 'RELEASE up';
         })
 
-        runLeft.addEventListener('touchstart', () => {
+        runLeft.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = "PRESS left";
         })
-        runLeft.addEventListener('touchend', () => {
+        runLeft.addEventListener('touchend', (e) => {
+          e.preventDefault();
             this.lastkey = 'RELEASE left';
            // pantingSound.play();  
         })
 
-        runRight.addEventListener('touchstart', () => {
+        runRight.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = "PRESS right";
         })
-        runRight.addEventListener('touchend', () => {
+        runRight.addEventListener('touchend', (e) => {
+          e.preventDefault();
             this.lastkey = 'RELEASE right';
            // pantingSound.play();  
         })
 
-        rollLeft.addEventListener('touchstart', () => {
+        rollLeft.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = 'PRESS ctrl left';
             fireBallSound.play();
             fireBallSound.currentTime = 0;
         })
-        rollLeft.addEventListener('touchend', () => {
+        rollLeft.addEventListener('touchend', (e) => {
+          e.preventDefault();
             this.lastkey = 'RELEASE left';
         })
-        rollRight.addEventListener('touchstart', () => {
+        rollRight.addEventListener('touchstart', (e) => {
+          e.preventDefault();
             this.lastkey = 'PRESS ctrl right';
             fireBallSound.play();
             fireBallSound.currentTime = 0;
         })
-        rollRight.addEventListener('touchend', () => {
+        rollRight.addEventListener('touchend', (e) => {
+          e.preventDefault();
             this.lastkey = 'RELEASE right';
         })
-
-        ///// touchsreen ///// 
-        ///// need to add 'swipe up' 'swipe down' in inputHandler at state.js 
-
-      /*    window.addEventListener('touchstart', (e) => {
-            this.touchY = e.changedTouches[0].pageY;
-        })
-        window.addEventListener('touchmove', (e) => {
-            console.log('move');
-            let swipeDistance = e.changedTouches[0].pageY - this.touchY;
-            if(swipeDistance < - this.touchTreshold && this.lastkey.indexOf('swipe up') === -1) this.lastkey.push('swipe up');
-            else if(swipeDistance > this.touchTreshold && this.lastkey.indexOf('swipe down') === -1) this.lastkey.push('swipe down');
-        })
-       window.addEventListener('touchend', (e) => {
-            console.log('end');
-            this.lastkey.splice(this.lastkey.indexOf('swipe up'), 1);
-            this.lastkey.splice(this.lastkey.indexOf('swipe down'), 1);
-        }) */
+     
     }
 }
