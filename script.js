@@ -318,21 +318,18 @@ export function init(){
     }
   
        ///canvas pause and how to play
-         const paused = document.getElementById('paused');
+        
         canvas.addEventListener('click', () => {
              if(!gameOver){
-                paused.style.display = 'block';  
                 bgm.pause();                    
                 gameOver = true;               
-               }    
-        })
-        paused.addEventListener('click', () => {
-             bgm.play();
-                gameOver = false;
-                paused.style.display = 'none';
+               } else {
+                bgm.play();
+                gameOver = false;              
                 animate(0);
-        }) 
-               
+        })
+                  
+                 
 
             
     function bonusGame(){
