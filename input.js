@@ -1,6 +1,6 @@
-//    const pantingSound = new Audio();
-//     pantingSound.src = 'sounds/sounds_dog_panting.mp3';    
-//     pantingSound.volume = 0.5;
+   /* const pantingSound = new Audio();
+    pantingSound.src = 'sounds/sounds_dog_panting.mp3';    
+   //  pantingSound.volume = 0.5; */
   const barkTwiceSound = new Audio();
     barkTwiceSound.src = 'sounds/sounds_dog-barking-twice.wav';    
     barkTwiceSound.volume = 0.2;
@@ -25,8 +25,7 @@ export default class handleInput{
            else if(!e.ctrlKey){
                 switch(e.key){
                  case 'ArrowLeft':
-//                      pantingSound.currentTime = 0;                       
-//                      pantingSound.play();                      
+           
                      this.lastkey = "PRESS left";                         
                      break;
                  case 'ArrowRight':
@@ -61,8 +60,8 @@ export default class handleInput{
                     this.lastkey = 'RELEASE up';
                     break;    
             }
-//             pantingSound.currentTime = 0;                       
-//                      pantingSound.play();    
+              /* pantingSound.currentTime = 0;                       
+              pantingSound.play();     */
         }) 
       
 
@@ -135,6 +134,8 @@ export default class handleInput{
           e.preventDefault();
             this.lastkey = 'RELEASE right';
         })
-     
-    }
-}
+
+        //touch screen 
+      
+       }
+     }   

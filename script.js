@@ -29,6 +29,17 @@ export function init(){
     const collisionSound = document.getElementById('collisionSound');
      const magicBell = document.getElementById('magicBell');
     const player = new Player(canvas.width, canvas.height);
+    const fish1 = document.getElementById('fish1_sound');
+    fish1.volume = 0.5;
+    const fish2 = document.getElementById('fish2_sound');
+    fish2.volume = 0.5;
+    const fish3 = document.getElementById('fish3_sound');
+    fish3.volume = 0.5;
+    const fish4 = document.getElementById('fish4_sound');
+    fish4.volume = 0.5;
+
+
+
     const input = new handleInput();    
     const restartBtn = document.getElementById('restartBtn');
     const signboard = document.getElementById('signboard');
@@ -88,6 +99,13 @@ export function init(){
             let randomNumber = Math.floor(Math.random() * 4);
             fishes.push(fishArray[randomNumber]);
             fishTimer = 0;
+            // fish sound
+            if(randomNumber = 0) fish1.play();
+            else if(randomNumber = 1) fish2.play();
+            else if(randomNumber = 2) fish3.play();
+            else fish4.play();
+
+
         }          
         fishes.forEach(fish => {
             fish.draw(ctx);
