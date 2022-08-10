@@ -51,9 +51,9 @@ export function init(){
     const chicken_bgm = document.getElementById('chicken_bgm');
         chicken_bgm.volume = 0.7;
     const brown_fox = document.getElementById('brown_fox_sound');
-        brown_fox.volume = 0.5;
+        brown_fox.volume = 0.8;
     const brown_fox_bgm = document.getElementById('brown_fox_bgm');
-        brown_fox_bgm.volume = 0.5;
+        brown_fox_bgm.volume = 0.7;
     const silver_fox = document.getElementById('silver_fox_sound');
         silver_fox.volume = 0.5;
     const silver_fox_bgm = document.getElementById('silver_fox_bgm');
@@ -368,7 +368,7 @@ export function init(){
                 bgm.pause();                    
                 gameOver = true;               
                } else {
-                bgm.play();
+                //bgm.play();
                 gameOver = false;              
                 animate(0);
                }
