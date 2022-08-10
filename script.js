@@ -23,21 +23,38 @@ export function init(){
     let gameOver = false;
     const bgm = document.getElementById('bgm');
         bgm.volume = 0.35;
-        bgm.play();
+        //bgm.play();
     const treasureSound = document.getElementById('scoreBell');
         treasureSound.volume = 0.5;
     const collisionSound = document.getElementById('collisionSound');
      const magicBell = document.getElementById('magicBell');
     const player = new Player(canvas.width, canvas.height);
     const fish1 = document.getElementById('fish1_sound');
-    fish1.volume = 0.5;
+    fish1.volume = 0.3;
     const fish2 = document.getElementById('fish2_sound');
-    fish2.volume = 0.5;
+    fish2.volume = 0.3;
     const fish3 = document.getElementById('fish3_sound');
-    fish3.volume = 0.5;
+    fish3.volume = 0.3;
     const fish4 = document.getElementById('fish4_sound');
-    fish4.volume = 0.5;
-
+    fish4.volume = 0.3;
+    const chicken1 = document.getElementById('chicken1_sound');
+    chicken1.volume = 0.7;
+    const chicken2 = document.getElementById('chicken2_sound');
+    chicken2.volume = 0.7;
+    const chicken3 = document.getElementById('chicken3_sound');
+    chicken3.volume = 0.7;
+    const chicken4 = document.getElementById('chicken4_sound');
+    chicken4.volume = 0.7;
+    const chicken_bgm = document.getElementById('chicken_bgm');
+    chicken_bgm.volume = 0.7;
+    const brown_fox = document.getElementById('brown_fox_sound');
+    brown_fox.volume = 0.5;
+    const brown_fox_bgm = document.getElementById('brown_fox_bgm');
+    brown_fox_bgm.volume = 0.5;
+    const silver_fox = document.getElementById('silver_fox_sound');
+    silver_fox.volume = 0.5;
+    const silver_fox_bgm = document.getElementById('silver_fox_bgm');
+    silver_fox_bgm.volume = 0.5;
 
 
     const input = new handleInput();    
@@ -98,12 +115,12 @@ export function init(){
             let fishArray = [fishYellow, fishBlue, fishBlack, fishRed];
             let randomNumber = Math.floor(Math.random() * 4);
             fishes.push(fishArray[randomNumber]);
-            fishTimer = 0;
             // fish sound
-            if(randomNumber = 0) fish1.play();
-            else if(randomNumber = 1) fish2.play();
-            else if(randomNumber = 2) fish3.play();
+            if(randomNumber == 0) fish1.play();
+            else if(randomNumber == 1) fish2.play();
+            else if(randomNumber == 2) fish3.play();
             else fish4.play();
+            fishTimer = 0;
 
 
         }          
@@ -133,6 +150,10 @@ export function init(){
             let random = Math.floor(Math.random() * 3);
             chickens.push(randomChicken[random]);
             chickenTimer = 0;
+            if(random == 0) chicken1.play();
+            else if(random == 1) chicken2.play();
+            else chicken3.play();
+            
         }
             chickens.forEach(chic => {
             chic.draw(context);
@@ -159,6 +180,7 @@ export function init(){
             let orangeFoxesArray = [orangeFoxWalk, orangeFoxRun, orangeFoxJump];
             orangeFoxes.push(orangeFoxesArray[randomNumber]);
             foxTimer = 0;
+            brown_fox.play();
         }
         orangeFoxes = orangeFoxes.filter(fox => !fox.markedForDeletion);
             foxTimer += deltaTime;
@@ -183,6 +205,7 @@ export function init(){
             let silverFoxesArray = [silverFoxWalk, silverFoxRun, silverFoxJump];
             silverFoxes.push(silverFoxesArray[randomNumber]);
             foxTimer = 0;
+            silver_fox.play();
         }
         silverFoxes = silverFoxes.filter(fox => !fox.markedForDeletion);
             foxTimer += deltaTime;
@@ -328,7 +351,7 @@ export function init(){
          lastTime = 0;
          player.life = 10;
          player.restart(); 
-         bgm.play()        
+         //bgm.play()        
          score = 0;
          gameOver = false;
          restartBtn.style.display = 'none';
@@ -410,15 +433,18 @@ export function init(){
   /////layer change by score
   function levelUp(){
         if(score <= 100){
+            bgm.play();
             layerHandler(level1layers, player);
             fishHandler(deltaTime); 
             //showTextBonus();   
         } else if(score > 100 && score < 110){
+            bgm.pause();
             magicBell.play();
             gameOver = true;
             levelUpBonus();
             showTextBonus();            
         } else if (score <= 300){
+            chicken_bgm.play();
             forest = 'NAHELE FOREST'; //HAWAIIAN TREE GROVE
             layerHandler(level2layers, player); 
             chickenHandler(ctx, deltaTime);           
@@ -428,6 +454,7 @@ export function init(){
             levelUpBonus();
             showTextBonus();
         } else if( score <= 500){
+            brown_fox_bgm.play();
             forest = 'KEZIA FOREST'; // cassia tree        
             layerHandler(level3layers,player);
             orangeFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
@@ -437,6 +464,7 @@ export function init(){
             levelUpBonus();
             showTextBonus();
         } else if( score <= 700){
+            silver_fox_bgm.play();
             forest = 'ARYWODE FOREST'; //from the fir forest
             layerHandler(level4layers, player);       
             silverFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
@@ -447,6 +475,7 @@ export function init(){
             showTextBonus();
         }   
         else if(score <= 1000) {
+            bgm.play();
             forest = 'WONDER FOREST';
             layerHandler(level1layers, player);
             orangeFoxHandler(ctx, deltaTime, canvas.width, canvas.height);
