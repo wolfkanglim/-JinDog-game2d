@@ -5,7 +5,7 @@ Created using sprite  sheets / javascript
 ![17 03 2022_08 30 21_REC](https://user-images.githubusercontent.com/74490365/158809051-c79eaec9-11b3-4144-89bf-40276a13b477.png)
 ## Jindog story
 Jin dog is named from Jindo dog originally bred from Jindo Island South Korea. Jindog is lost a dog and journeys back home. jump and run through the wondrous forest, jump over enemies, collect apples, hearts, butterflies
-
+### Demo Video  https://www.youtube.com/watch?v=lECMVUalKFA
 ## Lets play!
 https://wolfkanglim.github.io/-JinDog-game2d/
 ### How to play
